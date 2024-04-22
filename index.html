@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Date Calculator</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Quattrocento"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1 class="heading">welcome to the date calculator</h1>
+    </header>
+    <header class="mobile_header">
+      <h1 class="heading">welcome to the<br />date calculator</h1>
+    </header>
+    <div class="wrapper">
+      <div class="tabs">
+        <div role="tablist" aria-label="Date And Holidays Calculator">
+          <button class="tab" role="tab" aria-selected="true" id="calc">
+            calculator
+          </button>
+          <button
+            class="tab tab_holidays"
+            role="tab"
+            aria-selected="false"
+            id="holy">
+            holidays
+          </button>
+        </div>
+        <div class="tab_panel" role="tabpanel" aria-labelledby="calc">
+          <form class="form">
+            <div class="container_inputs_date">
+              <label class="label"
+                >start date
+                <input class="input start_date" type="date" />
+              </label>
+              <label class="label"
+                >end date
+                <input class="input end_date" type="date" disabled />
+              </label>
+            </div>
+                    <div class="container_add_buttons">
+                        <button type="button" class="button plus_week">add a week</button>
+                        <button type="button" class="button plus_month">add a month</button>
+                    </div>
+                    <div class="container_selects">
+                        <select class="select select_days">
+                            <option value="all-days">all days</option>
+                            <option value="working-days">working days</option>
+                            <option value="weekend">weekend days</option>
+                        </select>
+                        <select class="select select_unit">
+                            <option value="day">calculate in days</option>
+                            <option value="hours">calculate in hours</option>
+                            <option value="minutes">calculate in minutes</option>
+                            <option value="seconds">calculate in seconds</option>
+                        </select>
+                    </div>
+                    <div class="container_calculate">
+                        <button type="submit" class="button calculate">calculate</button>
+                    </div>
+                    <div>
+                        <h3 class="result"></h3>
+                    </div>
+
+
+                </form>
+                <section class="results" hidden>
+                    <div class="results_header">
+                        <h2>previous results:</h2>
+                    </div>
+                    <table class="table">
+                        <tr>
+                            <th>start date</th>
+                            <th>end date</th>
+                            <th>result</th>
+                        </tr>
+                    </table>
+                </section>
+
+
+            </div>
+            <div class="tab_panel" role="tabpanel" aria-labelledby="holy" hidden>
+                <form class="form_holidays">
+                    <div>
+                        <select class="select select_country">
+                            <option class="select_pleceholder">choose country</option>
+                        </select>
+                        <select class="select select_year" disabled></select>
+                    </div>
+                    <div>
+                        <button type="submit" class="button show">show holidays</button>
+
+                    </div>
+                    
+                </form>
+                <section class="results_list" hidden>
+                    <div class="results_header">
+                        <h2>the list:</h2>
+                    </div>
+                    <table class="table table_holidays">
+                        <thead>
+                            <tr class="table_holdays_header">
+                                <th class="date_of_holiday">date<div class="arrow"></div></th>
+                                <th>what to celebrate</th>
+                            </tr>
+                        </thead>
+                       <tbody class="list_holidays">
+
+                       </tbody>
+                    </table>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/index.js" type="module"></script>
+  </body>
+</html>

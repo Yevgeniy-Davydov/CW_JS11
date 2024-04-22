@@ -1,0 +1,140 @@
+body {
+  margin: 0;
+  font-family: "Quattrocento", sans-serif;
+}
+header {
+  display: flex;
+  justify-content: center;
+  background-color: beige;
+}
+.tab {
+  font-family: "Quattrocento", sans-serif;
+  font-size: 15px;
+  margin-left: 10px;
+  border-radius: 0 0 7px 7px;
+  border: none;
+  border-bottom: solid 1px grey;
+  background: transparent;
+}
+.tab[aria-selected="true"] {
+  box-shadow: none;
+  border: none;
+  background-color: beige;
+  transition: 0.5s;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+}
+.container_inputs_date {
+  display: flex;
+}
+.container_add_buttons {
+  display: flex;
+}
+.container_selects {
+  display: flex;
+}
+.container_calculate {
+  display: flex;
+}
+
+.input {
+  margin-top: 20px;
+  margin-bottom: 15px;
+  font-family: "Quattrocento", sans-serif;
+  font-size: 15px;
+  border-radius: 5px;
+  border: solid 1px grey;
+}
+.label {
+  font-size: 15px;
+  margin: 10px;
+}
+.select {
+  font-family: "Quattrocento", sans-serif;
+  font-size: 15px;
+  margin: 10px;
+  border-radius: 7px;
+  border: none;
+}
+.button {
+  font-family: "Quattrocento", sans-serif;
+  font-size: 15px;
+  margin: 10px;
+  border-radius: 7px;
+  border: solid 1px grey;
+  background-color: beige;
+}
+.result {
+  height: 25px;
+  margin: 10px;
+  display: flex;
+}
+.results_header {
+  display: flex;
+  justify-content: center;
+  background-color: beige;
+}
+.table {
+  width: 100%;
+}
+td,
+th {
+  width: 33%;
+  border-bottom: 1px solid gray;
+  text-align: center;
+}
+
+tr:nth-child(even) {
+  background-color: beige;
+}
+.arrow {
+  border: 1px solid gray;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  rotate: 45deg;
+  margin-left: 5px;
+  margin-bottom: 2px;
+  transition: 0.5s;
+}
+.up {
+  border: 1px solid gray;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  rotate: 225deg;
+  margin-left: 5px;
+  margin-bottom: -2px;
+  transition: 0.5s;
+}
+.alert {
+  display: flex;
+  justify-content: center;
+  background-color: red;
+  color: beige;
+}
+
+@media all and (min-width: 320px) and (max-width: 780px) {
+  .container_inputs_date,
+  .container_selects,
+  .container_add_buttons,
+  .container_calculate,
+  .result {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  header {
+    display: none;
+  }
+  .mobile_header {
+    display: flex;
+  }
+}
+@media all and (min-width: 781px) {
+  .mobile_header {
+    display: none;
+  }
+}
