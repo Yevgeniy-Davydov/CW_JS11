@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: "Quattrocento", sans-serif;
+  font-family: "Quattrocento", "Arial", sans-serif;
 }
 header {
   display: flex;
@@ -8,7 +8,7 @@ header {
   background-color: beige;
 }
 .tab {
-  font-family: "Quattrocento", sans-serif;
+  font-family: "Quattrocento", "Arial", sans-serif;
   font-size: 15px;
   margin-left: 10px;
   border-radius: 0 0 7px 7px;
@@ -42,7 +42,7 @@ header {
 .input {
   margin-top: 20px;
   margin-bottom: 15px;
-  font-family: "Quattrocento", sans-serif;
+  font-family: "Quattrocento", "Arial", sans-serif;
   font-size: 15px;
   border-radius: 5px;
   border: solid 1px grey;
@@ -52,14 +52,14 @@ header {
   margin: 10px;
 }
 .select {
-  font-family: "Quattrocento", sans-serif;
+  font-family: "Quattrocento", "Arial", sans-serif;
   font-size: 15px;
   margin: 10px;
   border-radius: 7px;
   border: none;
 }
 .button {
-  font-family: "Quattrocento", sans-serif;
+  font-family: "Quattrocento", "Arial", sans-serif;
   font-size: 15px;
   margin: 10px;
   border-radius: 7px;

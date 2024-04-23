@@ -1,5 +1,5 @@
 import { getCountries, getHolidays } from "./api.js";
-import { showAlert, hideAlert } from "./alet.js";
+import { showAlert} from "./alet.js";
 
 
 export let tab = document.querySelector(".tab_holidays");
@@ -14,32 +14,38 @@ export let arrow = document.querySelector(".arrow");
 let resultsBlock = document.querySelector(".results_list"); 
 
 const handleTabSelect = async () => {
-  generateYearsSelect();
-  
-  const countriesResponse = await getCountries();
-  generateCountrySelect(countriesResponse);
-  
+  try{
+    generateYearsSelect();
+    
+    const countriesResponse = await getCountries();
+    generateCountrySelect(countriesResponse);
+
+  }catch(error){
+   
+    showAlert("Can't load the countries", 4000);
+  }
 };
 const handleForm = async (event) => {
-  event.preventDefault();
   
-  const holidaysResponse = await getHolidays(selectCountry.value, selectYear.value);
-  handleList(holidaysResponse);
-  
-  resultsBlock.hidden = false;
-
-  // if (arrow.classList.contains("arrow up")) {
-  //   // arrow.className = "arrow"
-  //   console.log("arrow up")
-  // }
-  
-  // try {
-  // } catch (error) {
-  //   // showAlert(error.meta.error_type);
-  //   showAlert();
-
+  try {
+    event.preventDefault();
     
-  // }
+    const holidaysResponse = await getHolidays(selectCountry.value, selectYear.value);
+    handleList(holidaysResponse);
+    
+    resultsBlock.hidden = false;
+  
+  checkArrow()
+
+  } catch (error) {
+
+    showAlert("Can't show the list");  
+  }
+};
+function checkArrow(){
+  if (arrow.classList.contains("up")) {
+    arrow.className = "arrow"
+  }
 };
 export function generateCountrySelect(data) {
   const {
